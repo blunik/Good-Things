@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Good-Things</string>
+    <string name="code_word">Use the code word</string>
+    <string name="check_code">check</string>
+    <string name="background">background</string>
+    <string name="invalid_code">Invalid code. But don\'t give up!</string>
+</resources>

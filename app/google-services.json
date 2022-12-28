@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "416073237262",
+    "firebase_url": "https://good-things-ba635-default-rtdb.firebaseio.com",
+    "project_id": "good-things-ba635",
+    "storage_bucket": "good-things-ba635.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416073237262:android:9adf1e57c8ba9840a50d5f",
+        "android_client_info": {
+          "package_name": "app.good.things"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416073237262-0n2e4ahe4h0dvpppij6ild4pe8nkr8fa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.good.things",
+            "certificate_hash": "ed7c977e9fea732c4f7eed185322282b239d201a"
+          }
+        },
+        {
+          "client_id": "416073237262-5jlvaij1sdlm2bj9v3skhet5ioik6h3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF_5TP1KORGuk6rqYCFCsiF_yTea0BpQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416073237262-5jlvaij1sdlm2bj9v3skhet5ioik6h3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

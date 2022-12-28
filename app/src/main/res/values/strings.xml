@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Good-Things</string>
+    <string name="code_word">Использовать кодовое слово</string>
+    <string name="check_code">Проверить</string>
+    <string name="background">background</string>
+    <string name="invalid_code">Неверный код. Но ты не сдавайся!</string>
 </resources>
