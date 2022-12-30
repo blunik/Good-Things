@@ -12,5 +12,5 @@ internal interface LoginInCodeService {
     /**
      * Functions which checks the code
      */
-    suspend fun checkCode(codeRequest: CodeRequest): CodeResponse
+    suspend fun checkCode(codeRequest: CodeRequest): Result<CodeResponse>
 }

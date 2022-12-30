@@ -1,10 +1,11 @@
-package app.good.things.presentation
+package app.good.things.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.good.things.domain.repositories.LoginInCodeRepository
 import app.good.things.domain.repositories.impl.LoginInCodeRepositoryImpl
 import app.good.things.presentation.model.CodeStatus
+import app.good.things.presentation.prefs
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.launch
@@ -29,14 +30,21 @@ internal class LoginViewModel : ViewModel() {
     fun checkCode(code: String) {
         viewModelScope.launch {
             _codeStatus.emit(
-                when (repository.checkCode(code)) {
-                    true -> {
-                        prefs.individualCode = code
-                        CodeStatus.VALID_CODE
+                repository.checkCode(code).fold(
+                    onSuccess = {
+                        when (it.isActive) {
+                            true -> {
+                                prefs.individualCode = code
+                                CodeStatus.VALID_CODE
+                            }
+                            false -> CodeStatus.INVALID_CODE
+                        }
+
+                    },
+                    onFailure = {
+                        CodeStatus.ERROR
                     }
-                    false -> CodeStatus.INVALID_CODE
-                }
-            )
+                ))
         }
     }
 }

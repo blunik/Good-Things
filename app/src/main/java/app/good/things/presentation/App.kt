@@ -3,10 +3,16 @@ package app.good.things.presentation
 import android.app.Application
 import app.good.things.data.SharedPrefs
 
+/**
+ * Local Shared Preferences
+ */
 internal val prefs: SharedPrefs by lazy {
     App.sharedPrefs!!
 }
 
+/**
+ * Application
+ */
 internal class App : Application() {
 
     companion object {

@@ -7,5 +7,7 @@ internal enum class CodeStatus {
 
     INVALID_CODE,
 
-    VALID_CODE
+    VALID_CODE,
+
+    ERROR
 }

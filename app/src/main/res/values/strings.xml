@@ -4,4 +4,13 @@
     <string name="check_code">Проверить</string>
     <string name="background">background</string>
     <string name="invalid_code">Неверный код. Но ты не сдавайся!</string>
+    <string name="send_message">sendMessage</string>
+    <string name="enter_code_receiver">Введите кодовое слово получателя</string>
+    <string name="send">Отправить</string>
+    <string name="send_success_message">Сообщение отправлено</string>
+    <string name="error">Что-то пошло не так</string>
+    <string name="enter_text_message">Введите текст сообщения</string>
+    <string name="title_send_message">Отправка сообщения</string>
+    <string name="messages">Сообщения</string>
+    <string name="rule_edit">Заполните все поля</string>
 </resources>

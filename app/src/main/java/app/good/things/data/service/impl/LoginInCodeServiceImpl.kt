@@ -17,19 +17,19 @@ import kotlin.coroutines.suspendCoroutine
  */
 internal class LoginInCodeServiceImpl : LoginInCodeService {
 
-    override suspend fun checkCode(codeRequest: CodeRequest): CodeResponse =
+    override suspend fun checkCode(codeRequest: CodeRequest): Result<CodeResponse> =
         suspendCoroutine { cont ->
             val database = FirebaseDatabase.getInstance().reference
             val s = database.child("code")
             s.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.hasChild(codeRequest.code)) {
-                        cont.resume(CodeResponse(true))
-                    } else cont.resume(CodeResponse(false))
+                        cont.resume(Result.success(CodeResponse(true)))
+                    } else cont.resume(Result.success(CodeResponse(false)))
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    cont.resume(CodeResponse(false))
+                    cont.resume(Result.failure(error.toException()))
                 }
             })
         }

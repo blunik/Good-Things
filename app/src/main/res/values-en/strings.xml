@@ -5,4 +5,13 @@
     <string name="check_code">check</string>
     <string name="background">background</string>
     <string name="invalid_code">Invalid code. But don\'t give up!</string>
+    <string name="send_message">sendMessage</string>
+    <string name="enter_code_receiver">Enter the recipient\'s code word</string>
+    <string name="send">Send</string>
+    <string name="send_success_message">Message sent</string>
+    <string name="error">Something went wrong</string>
+    <string name="enter_text_message">Enter the text of the message</string>
+    <string name="title_send_message">Message sending</string>
+    <string name="messages">Messages</string>
+    <string name="rule_edit">Fill in all fields</string>
 </resources>
